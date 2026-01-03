@@ -1,0 +1,62 @@
+{
+	"name": "sveltekit-remote-function-e2e-tests",
+	"description": "Isolated parallel E2E tests for a SvelteKit app using Remote Functions and Bun, with an independent PostgreSQL database per test case.",
+	"version": "0.0.1",
+	"type": "module",
+	"author": {
+		"name": "Chun Nam Wong",
+		"url": "https://chunnamwong.com"
+	},
+	"keywords": [
+		"remote functions",
+		"sveltekit",
+		"svelte",
+		"playwright",
+		"e2e",
+		"docker",
+		"testcontainers",
+		"bun"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chunnamwong/sveltekit-remote-function-e2e-tests.git"
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"format": "prettier --write .",
+		"lint": "prettier --check . && eslint .",
+		"test:e2e": "playwright test",
+		"test": "npm run test:e2e"
+	},
+	"devDependencies": {
+		"@eslint/compat": "^1.4.0",
+		"@eslint/js": "^9.39.1",
+		"@playwright/test": "^1.57.0",
+		"@sveltejs/adapter-auto": "^7.0.0",
+		"@sveltejs/kit": "^2.49.1",
+		"@sveltejs/vite-plugin-svelte": "^6.2.1",
+		"@testcontainers/postgresql": "^11.11.0",
+		"@types/bun": "^1.3.5",
+		"@types/node": "^24",
+		"eslint": "^9.39.1",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-svelte": "^3.13.1",
+		"globals": "^16.5.0",
+		"prettier": "^3.7.4",
+		"prettier-plugin-svelte": "^3.4.0",
+		"svelte": "^5.45.6",
+		"svelte-adapter-bun": "^1.0.1",
+		"svelte-check": "^4.3.4",
+		"testcontainers": "^11.11.0",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.48.1",
+		"valibot": "^1.2.0",
+		"vite": "^7.2.6"
+	}
+}
